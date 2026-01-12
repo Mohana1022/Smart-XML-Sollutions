@@ -1,1 +1,596 @@
+HomePage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartXML</title>
 
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: "#2563eb",
+        accent: "#38bdf8",
+        darkbg: "#0b1a2a"
+      }
+    }
+  }
+}
+    
+  </script>
+  <!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<style>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease forwards;
+}
+</style>
+
+<style>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO TITLE SAFE ANIMATION */
+.hero-title {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+</style>
+
+</head>
+
+<body class="bg-darkbg text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-white sticky top-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-2 text-slate-800 font-semibold text-lg">
+      <span class="bg-primary text-white px-3 py-1 rounded-lg">⌘</span>
+      Smart<span class="text-primary">XML</span>
+    </div>
+
+    <nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
+      <a href="./index.html" class="px-3 py-1 rounded-lg bg-blue-100 text-primary">Home</a>
+      <a href="./AboutUs.html">About Us</a>
+      <a href="./Services.html">Services</a>
+      <a href="./Process.html">Process</a>
+      <a href="./Industries.html">Industries</a>
+      <a href="./Contact.html">Contact</a>
+    </nav>
+
+    <a>
+    <button class="hidden md:block bg-primary text-white px-5 py-2 rounded-lg">
+      Request a Quote
+    </button>
+    </a>
+
+    
+
+    <div id="menuToggle" class="md:hidden text-2xl cursor-pointer">☰</div>
+  </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="relative h-[calc(100vh-80px)] overflow-hidden reveal">
+
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <div class="slide absolute inset-0 bg-cover bg-center"
+         style="background-image:url('HomePageImages/banner1.png')"></div>
+    <!-- <div class="slide absolute inset-0 bg-cover bg-center"
+         style="background-image:url('HomePageImages/banner2.png')"></div>
+    <div class="slide absolute inset-0 bg-cover bg-center"
+         style="background-image:url('HomePageImages/banner3.png')"></div> -->
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+
+    <!-- <div class="mb-6 px-4 py-2 rounded-full border border-accent/40 bg-primary/20 text-accent text-sm">
+      📄 Enterprise XML Solutions
+    </div> -->
+
+    <h1 class="hero-title text-4xl md:text-5xl font-bold leading-tight">
+      Transform Your Data with <br />
+      <span class="text-accent">Accuracy, Structure & Clarity</span>
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-slate-300 text-lg">
+     We help organizations convert unstructured and legacy content into clean, well-structured XML and digital 
+formats. Our services enable smoother system integration, better data access, and long-term content 
+usability.
+    </p>
+
+    <div class="mt-8 flex gap-4 flex-wrap justify-center">
+      <a href="./Contact.html"
+         class="bg-gradient-to-r from-primary to-accent px-6 py-3 rounded-xl">
+        Request a Quote →
+      </a>
+
+      <a href="./Services.html"
+         class="border border-white/40 px-6 py-3 rounded-xl">
+        Explore Services
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="relative h-32 bg-white overflow-hidden">
+  <div
+    class="absolute inset-0
+           bg-gradient-to-b
+           from-[#0b1a2a]/90
+           via-[#0b1a2a]/40
+           to-white">
+  </div>
+</section>
+
+<!-- ================= CORE SERVICES ================= -->
+<section class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">
+      Our Core Services
+    </h2>
+
+    <p class="mt-4 max-w-2xl mx-auto text-slate-500 text-lg">
+      Enterprise-grade XML conversion, content digitization, and data validation services built for 
+accuracy and scale 
+    </p>
+
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
+
+  <!-- Card 1 -->
+  <div
+    class="service-card bg-slate-100 border border-slate-200 rounded-2xl p-8 text-left
+           shadow-md transition-all duration-300
+           hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div
+      class="w-14 h-14 flex items-center justify-center rounded-xl
+             bg-blue-200 text-blue-700 mb-6 text-2xl"
+    >
+      <i class="fa-solid fa-file-code"></i>
+    </div>
+
+    <h3 class="text-xl font-semibold text-slate-900 mb-3">
+      XML Conversion Services 
+    </h3>
+
+    <p class="text-slate-600 leading-relaxed">
+      We provide XML conversion services that transform PDF, Word, HTML, and legacy documents into 
+structured, standards-compliant XML for seamless system integration.
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    class="service-card bg-slate-100 border border-slate-200 rounded-2xl p-8 text-left
+           shadow-md transition-all duration-300
+           hover:-translate-y-2 hover:shadow-xl"
+  >b
+    <div
+      class="w-14 h-14 flex items-center justify-center rounded-xl
+             bg-blue-200 text-blue-700 mb-6 text-2xl"
+    >
+      <i class="fa-solid fa-database"></i>
+    </div>
+
+    <h3 class="text-xl font-semibold text-slate-900 mb-3">
+      Content Digitization Services 
+    </h3>
+
+    <p class="text-slate-600 leading-relaxed">
+      Our content digitization services convert physical records and legacy files into searchable digital formats 
+that support modern content management workflows. 
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    class="service-card bg-slate-100 border border-slate-200 rounded-2xl p-8 text-left
+           shadow-md transition-all duration-300
+           hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div
+      class="w-14 h-14 flex items-center justify-center rounded-xl
+             bg-blue-200 text-blue-700 mb-6 text-2xl"
+    >
+      <i class="fa-solid fa-clipboard-check"></i>
+    </div>
+
+    <h3 class="text-xl font-semibold text-slate-900 mb-3">
+      DTD / XSD Data Validation
+    </h3>
+
+    <p class="text-slate-600 leading-relaxed">
+      We perform DTD and XSD data validation to verify the structure, accuracy, and consistency of the data 
+before final delivery to your systems. 
+    </p>
+  </div>
+
+</div>
+
+
+    <div class="mt-14">
+      <a href="./Services.html"
+         class="inline-flex items-center gap-2 px-8 py-3 rounded-xl
+                border border-slate-300 text-slate-700
+                hover:bg-primary hover:text-white transition">
+        View All Services →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="bg-slate-50 py-24">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+        Why Choose Smart XML <br /> Solutions?
+      </h2>
+
+      <p class="mt-6 text-slate-600 text-lg max-w-xl">
+       With proven experience in XML processing and content digitization, we support enterprises with reliable 
+data conversion services that prioritize accuracy, consistency, and long-term usability across various 
+systems.
+      </p>
+
+      <!-- Bullet Points -->
+      <ul class="mt-8 space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="text-primary text-lg mt-1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="text-slate-700">
+            Standards-based DTD and XSD validation for structured XML data
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span class="text-primary text-lg mt-1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="text-slate-700">
+            Multi-level quality checks to ensure consistent and accurate output
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span class="text-primary text-lg mt-1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="text-slate-700">
+            Scalable workflows designed for large-volume data processing 
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span class="text-primary text-lg mt-1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="text-slate-700">
+            Secure handling of business-critical and sensitive information 
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+          <span class="text-primary text-lg mt-1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="text-slate-700">
+            Clear project coordination and ongoing client support 
+          </span>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <div class="mt-10">
+        <a
+          href="./AboutUs.html"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+                 bg-primary text-white font-medium
+                 hover:bg-blue-700 transition"
+        >
+          Learn More About Us →
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT STATS -->
+    <div class="grid sm:grid-cols-2 gap-8">
+
+      <div class="stat-card bg-white rounded-2xl border border-slate-200 p-8 text-center">
+        <div class="stat-number text-4xl font-bold text-primary" data-target="500">500+</div>
+        <p class="mt-2 text-slate-600">Projects Successfully Delivered</p>
+      </div>
+
+      <div class="stat-card bg-white rounded-2xl border border-slate-200 p-8 text-center">
+        <div class="stat-number text-4xl font-bold text-primary" data-target="99.9">99.9%</div>
+        <p class="mt-2 text-slate-600">Data Accuracy Level </p>
+      </div>
+
+      <div class="stat-card bg-white rounded-2xl border border-slate-200 p-8 text-center">
+        <div class="stat-number text-4xl font-bold text-primary" data-target="50">50+ </div>
+        <p class="mt-2 text-slate-600">Enterprise Customers Served </p>
+      </div>
+
+      <div class="stat-card bg-white rounded-2xl border border-slate-200 p-8 text-center">
+        <div class="stat-number text-4xl font-bold text-primary" data-target="15">15+ </div>
+        <p class="mt-2 text-slate-600">Years of Industry Experience </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES WE SERVE ================= -->
+<section class="bg-white py-24">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-black">
+      Industries We Serve
+    </h2>
+
+    <p class="mt-4 text-lg text-gray-600">
+      Delivering reliable XML and data processing solutions across multiple industries 
+    </p>
+
+    <!-- Industry Pills -->
+    <div class="mt-16 flex flex-wrap justify-center gap-6">
+
+      <!-- Card -->
+      <div
+        class="flex items-center gap-3 px-6 py-4 rounded-xl
+               border border-gray-300 text-black
+               shadow-sm cursor-pointer
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg"
+      >
+        <i class="fa-solid fa-book-open text-blue-700 text-lg"></i>
+        <span class="font-medium">Publishing</span>
+      </div>
+
+      <div
+        class="flex items-center gap-3 px-6 py-4 rounded-xl
+               border border-gray-300 text-black
+               shadow-sm cursor-pointer
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg"
+      >
+        <i class="fa-solid fa-building-columns text-blue-700 text-lg"></i>
+        <span class="font-medium">Banking & Finance</span>
+      </div>
+
+      <div
+        class="flex items-center gap-3 px-6 py-4 rounded-xl
+               border border-gray-300 text-black
+               shadow-sm cursor-pointer
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg"
+      >
+        <i class="fa-solid fa-heart-pulse text-blue-700 text-lg"></i>
+        <span class="font-medium">Healthcare</span>
+      </div>
+
+      <div
+        class="flex items-center gap-3 px-6 py-4 rounded-xl
+               border border-gray-300 text-black
+               shadow-sm cursor-pointer
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg"
+      >
+        <i class="fa-solid fa-graduation-cap text-blue-700 text-lg"></i>
+        <span class="font-medium">Education</span>
+      </div>
+
+      <div
+        class="flex items-center gap-3 px-6 py-4 rounded-xl
+               border border-gray-300 text-black
+               shadow-sm cursor-pointer
+               transition-all duration-300
+               hover:-translate-y-1 hover:shadow-lg"
+      >
+        <i class="fa-solid fa-cart-shopping text-blue-700 text-lg"></i>
+        <span class="font-medium">E-commerce</span>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="mt-14">
+      <a
+        href="./Industries.html"
+        class="inline-flex items-center gap-2 px-8 py-3 rounded-xl
+               border border-gray-400 text-black font-medium
+               shadow-sm
+               hover:bg-blue-700 hover:text-white hover:border-blue-700
+               transition-all duration-300"
+      >
+        Explore Industry Solutions  →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+<section
+  class="relative py-28 px-6 text-center text-white
+         bg-gradient-to-br from-[#0b1a2a] via-[#14263d] to-[#0b1a2a] overflow-hidden"
+>
+
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="cta-title text-3xl md:text-4xl font-bold">
+      Ready to Transform Your Data?
+    </h2>
+
+    <p class="cta-text mt-6 text-lg text-slate-300">
+      Let’s explore how our XML conversion and data processing services can simplify content workflows, 
+improve system compatibility, and support long-term data management. 
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-6">
+
+      <a
+        href="./Contact.html"
+        class="px-8 py-3 rounded-xl font-medium
+               bg-white text-slate-900
+               shadow-md
+               hover:shadow-xl hover:-translate-y-1
+               transition-all duration-300"
+      >
+        Contact Our Team  →
+      </a>
+
+      <a
+        href="./Process.html"
+        class="px-8 py-3 rounded-xl font-medium
+               border border-white/40 text-white
+               hover:bg-white hover:text-slate-900
+               transition-all duration-300"
+      >
+        View Our Process
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gradient-to-b from-[#0b1a2a] to-[#081426] px-6 pt-20 pb-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 text-slate-300">
+
+    <div>
+      <div class="flex items-center gap-2 text-xl font-semibold mb-4">
+        <span class="bg-primary px-3 py-1 rounded-lg">⌘</span>
+        Smart<span class="text-accent">XML</span>
+      </div>
+      <p class="text-sm">Smart XML Solutions delivers reliable XML conversion, content digitization, and data processing services 
+that help organizations manage structured information with accuracy and consistency.</p>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-4">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>XML Conversion Services</li>
+        <li>XML Tagging Services</li>
+        <li>DTD / XSD Validation</li>
+        <li>Content Digitization Services</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-4">Company</h4>
+      <ul class="space-y-2 text-sm">
+        <li>About Smart XML Solutions</li>
+        <li>Our Process</li>
+        <li>Industries We Serve</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+   <div>
+  <h4 class="text-white mb-4">Networks</h4>
+
+  <p class="text-sm mb-4 text-slate-400">
+    Connect with Smart XML Solutions
+  </p>
+
+  <div class="flex items-center gap-4">
+
+    <!-- LinkedIn -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-600 text-white
+              hover:bg-blue-700 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- Twitter / X -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-sky-500 text-white
+              hover:bg-sky-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-500 text-white
+              hover:bg-blue-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-gradient-to-tr from-pink-500 to-purple-600 text-white
+              hover:opacity-90 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="mt-12 border-t border-white/10 pt-4 text-center text-sm text-slate-400">
+    © 2026 Smart XML Solutions. All rights reserved. 
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
