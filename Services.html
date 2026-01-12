@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,83 +6,758 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Page</title>
   <link rel="stylesheet" href="Services.css">
+  <!-- Tailwind CSS CDN (REQUIRED) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* NAVBAR UNDERLINE SLIDE EFFECT */
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #2563eb; /* blue-600 */
+    transition: width 0.5s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Active page underline */
+  .nav-link.active::after {
+    width: 100%;
+  }
+</style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-<header class="navbar">
-  <div class="navbar-container">
+<!-- ================= NAVBAR ================= -->
+<header class="bg-white sticky top-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- Logo -->
-    <div class="logo">
-      <div class="logo-icon">⌘</div>
-      <span class="logo-text">Smart<span>XML</span></span>
+    <div class="flex items-center gap-2 text-slate-800 font-semibold text-lg">
+      <span class="text-blue-600 text-xl font-bold">⌘</span>
+      Smart<span class="text-primary">XML</span>
     </div>
 
-    <!-- Navigation Links -->
-    <nav class="nav-links" id="navLinks">
-      <a href="./index.html" class="active">Home</a>
-      <a href="./About.js">About Us</a>
-      <a href="./Services.js">Services</a>
-      <a href="./Process.js">Process</a>
-      <a href="./Industries.html">Industries</a>
-      <a href="./Contact.html">Contact</a>
-    </nav>
+    <nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
+  <a href="./index.html" class="nav-link">Home</a>
+  <a href="./AboutUs.html" class="nav-link">About Us</a>
+  <a href="./Services.html" class="nav-link">Services</a>
+  <a href="./Process.html" class="nav-link">Process</a>
+  <a href="./Industries.html" class="nav-link">Industries</a>
+  <a href="./Contact.html" class="nav-link">Contact</a>
+</nav>
 
-    <!-- CTA Button -->
-    <div class="nav-cta">
-      <button class="quote-btn">Request a Quote</button>
-    </div>
 
-    <!-- Mobile Menu Icon -->
-    <div class="menu-toggle" id="menuToggle">
-      ☰
-    </div>
+ <a href="./Contact.html">
+    <button class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg">
+  Request a Quote
+</button>
+</a>
 
+    
+
+    <div id="menuToggle" class="md:hidden text-2xl cursor-pointer">☰</div>
   </div>
 </header>
 
-<footer class="footer">
-  <div class="footer-container">
+<!-- Services Hero Section -->
+<section class="w-full bg-gradient-to-r from-[#0b1a2a] to-[#102a43] px-4 py-24 md:py-28">
+  <div class="max-w-4xl mx-auto text-center">
+    
+    <h1 class="text-white text-3xl md:text-4xl font-semibold mb-4">
+      Our Services
+    </h1>
 
-    <!-- Company -->
-    <div class="footer-column">
-      <h3 class="footer-logo">Smart<span>XML</span></h3>
-      <p class="footer-text">
-        Enterprise XML solutions for data conversion, digitization, and
-        intelligent content processing.
-      </p>
+    <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+      Comprehensive XML and data processing solutions designed to meet enterprise
+      requirements with precision and reliability.
+    </p>
+
+  </div>
+</section>
+
+<!-- XML Conversion Service Section -->
+<section class="w-full bg-gray-100 py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- HEADING (FROM LEFT) -->
+    <div
+      class="flex items-center gap-4 mb-8
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left"
+    >
+      <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-lg">
+        <span class="text-blue-600 text-xl font-bold">⌘</span>
+      </div>
+      <h2 class="text-3xl font-semibold text-blue-600">
+        XML Conversion
+      </h2>
     </div>
 
-    <!-- Footer Links -->
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul class="footer-links" id="footerLinks">
-        <li><a href="./index.html" class="active">Home</a></li>
-        <li><a href="./AboutUs.html">About Us</a></li>
-        <li><a href="./Services.html">Services</a></li>
-        <li><a href="./Process.html">Process</a></li>
-        <li><a href="./Industries.html">Industries</a></li>
-        <li><a href="./Contact.html">Contact</a></li>
+    <!-- IMAGES ROW (FROM LEFT) -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left"
+    >
+      <img
+        src="ServicePageImages/PdfToXml.png"
+        alt="PDF to XML"
+        class="w-full max-w-[220px] mx-auto rounded-xl bg-white
+               shadow-[0_0_18px_rgba(0,0,0,0.18)]
+               transition-all duration-300
+               hover:-translate-y-2
+               hover:shadow-[0_0_28px_rgba(0,0,0,0.25)]"
+      />
+      <img
+        src="ServicePageImages/DocToXml.png"
+        alt="Word to XML"
+        class="w-full max-w-[220px] mx-auto rounded-xl bg-white
+               shadow-[0_0_18px_rgba(0,0,0,0.18)]
+               transition-all duration-300
+               hover:-translate-y-2
+               hover:shadow-[0_0_28px_rgba(0,0,0,0.25)]"
+      />
+      <img
+        src="ServicePageImages/htmlToXml.png"
+        alt="Code to XML"
+        class="w-full max-w-[220px] mx-auto rounded-xl bg-white
+               shadow-[0_0_18px_rgba(0,0,0,0.18)]
+               transition-all duration-300
+               hover:-translate-y-2
+               hover:shadow-[0_0_28px_rgba(0,0,0,0.25)]"
+      />
+    </div>
+
+    <!-- DESCRIPTION (FROM LEFT) -->
+    <p
+      class="text-slate-700 text-base leading-relaxed mb-10 max-w-5xl
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left"
+    >
+      We convert documents from multiple source formats into structured,
+      standards-compliant XML. Our XML conversion services focus on maintaining
+      content accuracy while applying consistent tagging and semantic structure
+      suitable for enterprise systems.
+    </p>
+
+    <!-- SERVICE SCOPE + BUSINESS BENEFITS (FROM RIGHT) -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-10
+             opacity-0 translate-x-20
+             transition-all duration-700 ease-out
+             reveal-right"
+    >
+
+      <!-- Service Scope -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Service Scope
+        </h3>
+        <ul class="space-y-2 text-base text-slate-600 list-disc list-inside">
+          <li>PDF to XML conversion with structural analysis</li>
+          <li>Word document to XML transformation</li>
+          <li>HTML to semantic XML conversion</li>
+          <li>Legacy format migration including SGML and custom formats</li>
+          <li>Batch XML processing for large-volume projects</li>
+        </ul>
+      </div>
+
+      <!-- Business Benefits -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Business Benefits
+        </h3>
+        <ul class="space-y-3 text-base text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Maintain document structure and content consistency
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Support content reuse across platforms and systems
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Improve data searchability and accessibility
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Simplify long-term storage with structured data formats
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- XML Tagging & Structuring Section -->
+<section class="w-full bg-gray-100 py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+    <!-- LEFT CONTENT (FROM LEFT) -->
+    <div
+      class="h-full flex flex-col justify-center
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left">
+
+      <!-- Title -->
+      <div class="flex items-center gap-4 mb-5">
+        <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-lg">
+          <i class="fa-solid fa-tags text-blue-600 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold text-blue-600">
+            XML Tagging & Structuring
+          </h2>
+          <p class="text-base text-slate-500">
+            Semantic markup and organization
+          </p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-slate-700 text-base leading-relaxed
+                w-full max-w-none lg:max-w-lg">
+        We apply structured XML tagging to organize content at a granular level. Our XML tagging services focus
+        on consistent semantic markup that supports content reuse, system compatibility, and efficient data
+        processing.
+      </p>
+
+    </div>
+
+    <!-- RIGHT CONTENT (FROM RIGHT) -->
+    <div
+      class="flex flex-col gap-6
+             opacity-0 translate-x-20
+             transition-all duration-700 ease-out
+             reveal-right">
+
+      <!-- Business Benefits -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Business Benefits
+        </h3>
+
+        <ul class="space-y-3 text-base text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Improve content discoverability and reuse
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Support automated data processing workflows
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Enable multi-channel content delivery
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Simplify integration with content management systems
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Scope -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Service Scope
+        </h3>
+
+        <ul class="space-y-2 text-base text-slate-600 list-disc list-inside">
+          <li>DTD or schema-based XML tagging</li>
+          <li>Semantic element identification and structuring</li>
+          <li>Metadata extraction and assignment</li>
+          <li>Cross-reference and internal link mapping</li>
+          <li>Index and table of contents creation</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- DTD / XSD Validation Section -->
+<section class="w-full bg-gray-100 py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+    <!-- LEFT CONTENT (FROM LEFT) -->
+    <div
+      class="flex flex-col justify-center
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left">
+
+      <!-- Title -->
+      <div class="flex items-center gap-4 mb-5">
+        <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-lg">
+          <i class="fa-solid fa-shield-halved text-blue-600 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold text-blue-600">
+            DTD / XSD Validation
+          </h2>
+          <p class="text-base text-slate-500">
+            Schema compliance verification
+          </p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-slate-700 text-base leading-relaxed
+                w-full max-w-none lg:max-w-lg">
+        We validate XML documents against defined DTD and XSD schemas to identify structural inconsistencies 
+        and formatting issues. Our validation services help ensure XML files align with expected specifications and 
+        function correctly within enterprise systems.
+      </p>
+
+    </div>
+
+    <!-- RIGHT CONTENT (FROM RIGHT) -->
+    <div
+      class="flex flex-col gap-6
+             opacity-0 translate-x-20
+             transition-all duration-700 ease-out
+             reveal-right">
+
+      <!-- Business Benefits -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Business Benefits
+        </h3>
+
+        <ul class="space-y-3 text-base text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Support smooth data interoperability across systems
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Reduce schema-related integration issues
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Assist with industry and internal compliance requirements
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Lower the risk of downstream processing errors
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Scope -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Service Scope
+        </h3>
+
+        <ul class="space-y-2 text-base text-slate-600 list-disc list-inside">
+          <li>DTD validation with structured error reporting</li>
+          <li>XSD schema validation and consistency checks</li>
+          <li>Custom validation rule configuration</li>
+          <li>Automated validation workflow setup</li>
+          <li>Compliance-related documentation support</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Content Digitization Section -->
+<section class="w-full bg-gray-100 py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+    <!-- LEFT CONTENT (FROM LEFT) -->
+    <div
+      class="flex flex-col justify-center
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left">
+
+      <!-- Title -->
+      <div class="flex items-center gap-4 mb-5">
+        <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-lg">
+          <i class="fa-solid fa-align-justify text-blue-600 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold text-blue-600">
+            Content Digitization
+          </h2>
+          <p class="text-base text-slate-500">
+            Print to digital transformation
+          </p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-slate-700 text-base leading-relaxed
+                w-full max-w-none lg:max-w-lg">
+        We convert physical documents and print-based materials into searchable, structured digital formats. Our 
+        content digitization services combine reliable scanning processes with careful quality review to support 
+        long-term access and usability.
+      </p>
+
+    </div>
+
+    <!-- RIGHT CONTENT (FROM RIGHT) -->
+    <div
+      class="flex flex-col gap-6
+             opacity-0 translate-x-20
+             transition-all duration-700 ease-out
+             reveal-right">
+
+      <!-- Business Benefits -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Business Benefits
+        </h3>
+
+        <ul class="space-y-3 text-base text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Preserve important records in digital form
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Enable faster access to digitized content
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Reduce reliance on physical storage
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Support secure remote access and collaboration
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Scope -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Service Scope
+        </h3>
+
+        <ul class="space-y-2 text-base text-slate-600 list-disc list-inside">
+          <li>High-resolution document scanning</li>
+          <li>OCR processing with verification checks</li>
+          <li>Image enhancement and cleanup</li>
+          <li>Searchable PDF and digital file creation</li>
+          <li>Digital archiving for long-term preservation</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Data Quality & Validation Section -->
+<section class="w-full bg-gray-100 py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+    <!-- LEFT CONTENT (FROM LEFT) -->
+    <div
+      class="flex flex-col justify-center
+             opacity-0 -translate-x-20
+             transition-all duration-700 ease-out
+             reveal-left">
+
+      <!-- Title -->
+      <div class="flex items-center gap-4 mb-5">
+        <div class="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-lg">
+          <i class="fa-solid fa-clipboard-check text-blue-600 text-xl"></i>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold text-blue-600">
+            Data Quality & Validation
+          </h2>
+          <p class="text-base text-slate-500">
+            Accuracy assurance services
+          </p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-slate-700 text-base leading-relaxed
+                w-full max-w-none lg:max-w-lg">
+        We support high data quality through structured validation and review processes. Our data quality services
+        combine automated checks with experienced human review to identify inconsistencies, reduce errors, and
+        improve overall data reliability.
+      </p>
+
+    </div>
+
+    <!-- RIGHT CONTENT (FROM RIGHT) -->
+    <div
+      class="flex flex-col gap-6
+             opacity-0 translate-x-20
+             transition-all duration-700 ease-out
+             reveal-right">
+
+      <!-- Business Benefits -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Business Benefits
+        </h3>
+
+        <ul class="space-y-3 text-base text-slate-600">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Support high levels of data accuracy
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Reduce rework and correction efforts
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Increase confidence in structured data outputs
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600">✔</span>
+            Align with internal and enterprise quality standards
+          </li>
+        </ul>
+      </div>
+
+      <!-- Service Scope -->
+      <div
+        class="bg-white rounded-xl p-6 shadow-sm
+               transition-all duration-500 ease-out
+               hover:-translate-y-3 hover:scale-[1.02]
+               hover:shadow-xl"
+      >
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">
+          Service Scope
+        </h3>
+
+        <ul class="space-y-2 text-base text-slate-600 list-disc list-inside">
+          <li>Multi-stage quality review processes</li>
+          <li>Automated error detection and consistency checks</li>
+          <li>Manual review and proofreading by trained specialists</li>
+          <li>Statistical sampling for quality assessment</li>
+          <li>Clear error reporting and review summaries</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gradient-to-b from-[#0b1a2a] to-[#081426] px-6 pt-20 pb-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 text-slate-300">
+
+    <div>
+      <div class="flex items-center gap-2 text-xl font-semibold mb-4">
+        <span class="bg-primary px-3 py-1 rounded-lg">⌘</span>
+        Smart<span class="text-accent">XML</span>
+      </div>
+      <p class="text-sm">Smart XML Solutions delivers reliable XML conversion, content digitization, and data processing services 
+that help organizations manage structured information with accuracy and consistency.</p>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-4">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>XML Conversion Services</li>
+        <li>XML Tagging Services</li>
+        <li>DTD / XSD Validation</li>
+        <li>Content Digitization Services</li>
       </ul>
     </div>
 
-    <!-- Contact -->
-    <div class="footer-column">
-      <h4>Contact</h4>
-      <p>Email: info@smartxml.com</p>
-      <p>Phone: +91 98765 43210</p>
-      <p>Location: Hyderabad, India</p>
+    <div>
+      <h4 class="text-white mb-4">Company</h4>
+      <ul class="space-y-2 text-sm">
+        <li>About Smart XML Solutions</li>
+        <li>Our Process</li>
+        <li>Industries We Serve</li>
+        <li>Contact Us</li>
+      </ul>
     </div>
 
+   <div>
+  <h4 class="text-white mb-4">Networks</h4>
+
+  <p class="text-sm mb-4 text-slate-400">
+    Connect with Smart XML Solutions
+  </p>
+
+  <div class="flex items-center gap-4">
+
+    <!-- LinkedIn -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-600 text-white
+              hover:bg-blue-700 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- Twitter / X -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-sky-500 text-white
+              hover:bg-sky-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-500 text-white
+              hover:bg-blue-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-gradient-to-tr from-pink-500 to-purple-600 text-white
+              hover:opacity-90 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+  </div>
+</div>
+
   </div>
 
-  <div class="footer-bottom">
-    © 2026 SmartXML. All rights reserved.
+  <div class="mt-12 border-t border-white/10 pt-4 text-center text-sm text-slate-400">
+    © 2026 Smart XML Solutions. All rights reserved. 
   </div>
 </footer>
+
 
 <script src="footer.js"></script>
 
   <script src="HomePage.js"></script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove(
+            'opacity-0',
+            '-translate-x-20',
+            'translate-x-20'
+          );
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  document
+    .querySelectorAll('.reveal-left, .reveal-right')
+    .forEach(el => observer.observe(el));
+
+});
+</script>
+
+
+
+
 </body>
 </html>
