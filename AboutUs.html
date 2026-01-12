@@ -40,34 +40,64 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    /* Navbar underline crossing effect */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: #2563eb; /* blue-600 */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
   </style>
 </head>
 
 <body class="bg-[#0b1a2a] text-gray-900">
 
 <!-- ================= NAVBAR ================= -->
-<header class="sticky top-0 z-50 bg-white shadow">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-    <div class="flex items-center gap-2 text-xl font-semibold text-gray-800">
-      <div class="bg-blue-600 text-white px-2 py-1 rounded">⌘</div>
-      <span>Smart<span class="text-blue-600">XML</span></span>
+<header class="bg-white sticky top-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-2 text-slate-800 font-semibold text-lg">
+      <span class="text-blue-600 text-xl font-bold">⌘</span>
+      Smart<span class="text-primary">XML</span>
     </div>
 
-    <nav>
-      <ul id="navLinks" class="hidden md:flex gap-6">
-        <li><a href="./index.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Home</a></li>
-        <li><a href="./About.js" class="bg-blue-100 text-blue-600 px-2 py-1 rounded font-medium">About Us</a></li>
-        <li><a href="Services.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Services</a></li>
-        <li><a href="Process.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Process</a></li>
-        <li><a href="./Industries.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Industries</a></li>
-        <li><a href="./Contact.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Contact</a></li>
-      </ul>
-    </nav>
+    <nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
+  <a href="./index.html" class="nav-link">Home</a>
+  <a href="./AboutUs.html" class="nav-link">About Us</a>
+  <a href="./Services.html" class="nav-link">Services</a>
+  <a href="./Process.html" class="nav-link">Process</a>
+  <a href="./Industries.html" class="nav-link">Industries</a>
+  <a href="./Contact.html" class="nav-link">Contact</a>
+</nav>
 
-    <button class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Request a Quote</button>
-    <button id="menuToggle" class="md:hidden text-2xl">☰</button>
+
+ <a href="./Contact.html">
+    <button class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg">
+  Request a Quote
+</button>
+</a>
+
+    
+
+    <div id="menuToggle" class="md:hidden text-2xl cursor-pointer">☰</div>
   </div>
 </header>
+
 
 <!-- ================= HERO ================= -->
 <section class="bg-gradient-to-r from-[#0f2a44] to-[#1c4e80] text-white py-24 text-center px-6">
