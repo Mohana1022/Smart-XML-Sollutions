@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart XML Solutions - About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ================= ANIMATIONS ================= -->
+  <style>
+    header { animation: fadeDown 0.8s ease-out forwards; }
+    section { animation: fadeUp 1s ease-out forwards; }
+    footer { animation: fadeIn 1.2s ease-out forwards; }
+
+    nav a, button {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    nav a:hover, button:hover { transform: translateY(-2px); }
+
+    section div {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section div:hover { transform: translateY(-4px); }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="bg-[#0b1a2a] text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header class="sticky top-0 z-50 bg-white shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-2 text-xl font-semibold text-gray-800">
+      <div class="bg-blue-600 text-white px-2 py-1 rounded">⌘</div>
+      <span>Smart<span class="text-blue-600">XML</span></span>
+    </div>
+
+    <nav>
+      <ul id="navLinks" class="hidden md:flex gap-6">
+        <li><a href="./index.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Home</a></li>
+        <li><a href="./About.js" class="bg-blue-100 text-blue-600 px-2 py-1 rounded font-medium">About Us</a></li>
+        <li><a href="./Services.js" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Services</a></li>
+        <li><a href="./Process.js" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Process</a></li>
+        <li><a href="./Industries.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Industries</a></li>
+        <li><a href="./Contact.html" class="text-gray-600 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Request a Quote</button>
+    <button id="menuToggle" class="md:hidden text-2xl">☰</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-r from-[#0f2a44] to-[#1c4e80] text-white py-24 text-center px-6">
+  <h1 class="text-4xl font-bold mb-4">About Smart XML Solutions</h1>
+  <p class="max-w-3xl mx-auto opacity-90">
+    Smart XML Solutions is a specialized data services company focused on XML processing and content
+    digitization. We work with organizations to structure, validate, and modernize large volumes of information
+    for reliable use across digital systems.
+  </p>
+</section>
+
+<!-- ================= OUR STORY + IMAGE ================= -->
+<section class="px-6 py-16 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Our Story -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Our Story</h2>
+      <p class="mb-3 leading-relaxed">
+        Smart XML Solutions was established to help organizations move from unstructured and legacy content
+        formats to reliable, structured digital data. From the beginning, our focus has been on accuracy, consistency,
+        and practical data usability.
+      </p>
+      <p class="mb-3 leading-relaxed">
+        As our work evolved, we developed strong expertise in XML processing, content digitization, and data
+        validation. We support organizations that rely on structured information to manage publishing content,
+        financial records, healthcare data, and enterprise documentation.
+      </p>
+      <p class="leading-relaxed">
+        Today, we continue to scale our services while maintaining strict quality controls. Our approach combines
+        technical discipline with clear processes to ensure dependable results across projects of varying size and
+        complexity.
+      </p>
+    </div>
+
+    <!-- Image -->
+    <div>
+      <img src="images/aboutusimage.jpeg" alt="Our Story" class="rounded-xl shadow-lg w-full">
+    </div>
+  </div>
+
+  <!-- ================= MISSION & VISION ================= -->
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 mt-12">
+    <div class="bg-blue-800 text-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold mb-2">🎯 Our Mission</h3>
+      <p>
+        To support organizations with accurate and well-structured data that improves content management, system
+        compatibility, and operational efficiency. We focus on delivering dependable XML and data processing
+        services while maintaining close collaboration with our clients.
+      </p>
+    </div>
+
+    <div class="bg-blue-800 text-white p-6 rounded-lg shadow">
+      <h3 class="text-xl font-semibold mb-2">👁 Our Vision</h3>
+      <p>
+        To be a trusted global partner for XML processing and content digitization services, helping organizations
+        manage information with clarity, structure, and long-term value in an evolv
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= CORE VALUES ================= -->
+  <section class="py-16 px-6 text-center max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-white mb-2">Our Core Values</h2>
+    <p class="text-gray-400 mb-10">The principles that guide our work, decisions, and client relationships</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">🛡 Quality First</h4>
+        <p>Every project follows structured review and validation steps to ensure accuracy, consistency, and dependable output across all deliverables.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">⚡ Technical Excellence</h4>
+        <p>Our team maintains strong knowledge of XML standards and modern data processing practices to deliver reliable, system-ready results.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">🤝 Client Partnership</h4>
+        <p>We work closely with clients to understand their workflows, timelines, and technical requirements, ensuring clear communication at every stage.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="text-xl font-semibold mb-2">🔄 Continuous Improvement</h4>
+        <p>We regularly refine our processes and tools to improve efficiency, accuracy, and overall service quality as requirements evolve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNICAL EXPERTISE ================= -->
+  <section class="flex flex-col md:flex-row gap-10 px-6 md:px-24 py-16 bg-white max-w-7xl mx-auto">
+    <div class="flex-1 md:flex-[2]">
+      <h2 class="text-2xl font-semibold mb-4">Technical Expertise</h2>
+      <p class="mb-4">
+        Our team applies strong technical knowledge and hands-on experience to enterprise data processing projects.
+        We follow established XML standards and continuously refine our methods to ensure reliable, scalable, and
+        maintainable results.
+      </p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>XML/SGML Conversion & Transformation</li>
+        <li>XSLT Stylesheet Development</li>
+        <li>Legacy Data Migration</li>
+        <li>High-Volume Batch Processing</li>
+        <li>DTD/XSD Schema Validation</li>
+        <li>CMS Integration</li>
+        <li>Automated Quality Assurance</li>
+        <li>Custom Workflow Development</li>
+      </ul>
+    </div>
+
+    <div class="flex-1 bg-gray-800 text-white p-6 rounded-xl space-y-4">
+      <h3 class="text-xl font-semibold">Quality Commitment</h3>
+
+      <div>
+        <span>Consistently High Accuracy Levels</span>
+        <div class="w-full h-2 bg-gray-700 rounded mt-1">
+          <div class="h-2 bg-sky-400 rounded" style="width: 99.9%;"></div>
+        </div>
+        <small>99.9%</small>
+      </div>
+
+      <div>
+        <span>Reliable Project Timelines</span>
+        <div class="w-full h-2 bg-gray-700 rounded mt-1">
+          <div class="h-2 bg-sky-400 rounded" style="width: 98%;"></div>
+        </div>
+        <small>98%</small>
+      </div>
+
+      <div>
+        <span>Strong Client Feedback</span>
+        <div class="w-full h-2 bg-gray-700 rounded mt-1">
+          <div class="h-2 bg-sky-400 rounded" style="width: 97%;"></div>
+        </div>
+        <small>97%</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#0b1a2a] text-gray-300 py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+
+      <!-- Footer Brand -->
+      <div>
+        <div class="flex items-center gap-2 text-2xl font-semibold text-white mb-4">
+          <div class="bg-blue-600 px-2 py-1 rounded">⌘</div>
+          <span>Smart<span class="text-sky-400">XML</span></span>
+        </div>
+        <p class="mb-4 text-gray-400 text-sm">
+          Performance indicators are based on internal reviews, client feedback, and project delivery assessments.
+        </p>
+        <ul class="text-sm space-y-1">
+          <li>✉ info@smartxmlsolutions.com</li>
+          <li>📞 +1 (555) 123-4567</li>
+          <li>📍 123 Tech Park Drive, Suite 400<br>San Francisco, CA 94102</li>
+        </ul>
+      </div>
+
+      <!-- Services Column -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Services</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-sky-400 transition">XML Conversion</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">XML Tagging</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">DTD/XSD Validation</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">Content Digitization</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Column -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Company</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:text-sky-400 transition">About Us</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">Our Process</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">Industries</a></li>
+          <li><a href="#" class="hover:text-sky-400 transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+        <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in XML technologies and data processing.</p>
+        <form id="newsletterForm" class="flex flex-col gap-2">
+          <input type="email" placeholder="Enter your email" required class="px-3 py-2 rounded bg-gray-700 text-white focus:outline-none"/>
+          <button type="submit" class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-4 text-sm flex flex-col md:flex-row justify-between items-center">
+      <span>© 2026 Smart XML Solutions. All rights reserved.</span>
+      <div class="flex gap-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-sky-400 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-sky-400 transition">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
