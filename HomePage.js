@@ -1,3 +1,4 @@
+
   document.addEventListener("DOMContentLoaded", () => {
 
     /* ===== Mobile menu ===== */
@@ -116,6 +117,7 @@
 
 
   /* ===== INDUSTRIES PILL HOVER & SCROLL ANIMATION ===== */
+
 
   const industryPills = document.querySelectorAll(".industry-pill");
 
