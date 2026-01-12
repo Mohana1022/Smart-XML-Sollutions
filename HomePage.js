@@ -7,11 +7,14 @@ menuToggle.addEventListener("click", () => {
 
 
 //Footer Part
-const footerLinks = document.querySelectorAll("#footerLinks a");
 
-footerLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    footerLinks.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
+const form = document.getElementById("newsletterForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = form.querySelector("input").value;
+
+  alert(`Subscribed successfully with: ${email}`);
+  form.reset();
 });
+
