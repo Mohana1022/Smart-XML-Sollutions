@@ -6,6 +6,9 @@ menuToggle.addEventListener("click", () => {
 });
 
 
+// About us 
+console.log("Smart XML About Page Loaded Successfully");
+
 //Footer Part
 const footerLinks = document.querySelectorAll("#footerLinks a");
 
