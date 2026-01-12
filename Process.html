@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart XML Solutions - Process</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+    <!-- Tailwind CSS CDN -->
+    <script src="Process.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="Process-Tailwind.css">
+
+    
+</head>
+
+<body class="font-['Inter'] bg-white text-text-primary overflow-x-hidden">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#8b5cf6',
+                        accent: '#f472b6',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                        'text-primary': '#0f172a',
+                        'text-secondary': '#475569',
+                    },
+                    backgroundImage: {
+                        'accent-gradient': 'linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #f472b6 100%)',
+                        'card-gradient': 'linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%)',
+                        'timeline-gradient': 'linear-gradient(180deg, rgba(14, 165, 233, 0.1) 0%, #0ea5e9 20%, #8b5cf6 50%, #f472b6 80%, rgba(244, 114, 182, 0.1) 100%)',
+                    },
+                    animation: {
+                        'gradient-shift': 'gradientShift 3s ease infinite',
+                        'rotate-slow': 'rotateSlow 20s linear infinite',
+                    },
+                    keyframes: {
+                        gradientShift: {
+                            '0%, 100%': { filter: 'hue-rotate(0deg)' },
+                            '50%': { filter: 'hue-rotate(20deg)' },
+                        },
+                        rotateSlow: {
+                            'from': { transform: 'rotate(0deg)' },
+                            'to': { transform: 'rotate(360deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+          <!-- ================= NAVBAR ================= -->
+<header class="bg-white sticky top-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-2 text-slate-800 font-semibold text-lg">
+      <span class="bg-primary text-white px-3 py-1 rounded-lg">⌘</span>
+      Smart<span class="text-primary">XML</span>
+    </div>
+
+    <nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
+      <a href="./index.html">Home</a>
+      <a href="./AboutUs.html">About Us</a>
+      <a href="./Services.html">Services</a>
+      <a href="./Process.html" class="px-3 py-1 rounded-lg bg-blue-100 text-primary">Process</a>
+      <a href="./Industries.html">Industries</a>
+      <a href="./Contact.html">Contact</a>
+    </nav>
+
+    <a href="./Contact.html">
+    <button class="hidden md:block bg-primary text-white px-5 py-2 rounded-lg">
+      Request a Quote
+    </button>
+    </a>
+
+    
+
+    <div id="menuToggle" class="md:hidden text-2xl cursor-pointer">☰</div>
+  </div>
+</header>
+    <main class="pt-20">
+
+
+        <!-- Hero Section -->
+        <section
+            class="py-12 md:py-16 text-center bg-[radial-gradient(circle_at_50%_-20%,rgba(14,165,233,0.1),transparent_60%),radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.08),transparent_50%)]">
+            <div class="container-custom">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 leading-tight">
+                    Our <span
+                        class="bg-accent-gradient bg-clip-text text-transparent animate-gradient-shift">Process</span>
+                </h1>
+                <p class="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Our process follows a clear, structured approach to XML conversion and data processing, ensuring
+                    accuracy, consistency, and predictable outcomes across every project.
+                </p>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-12 relative bg-slate-50 overflow-hidden">
+            <!-- Background Orbs -->
+            <div
+                class="absolute top-[10%] -left-[200px] w-[500px] h-[500px] rounded-full blur-[140px] opacity-[0.08] bg-gradient-to-br from-primary to-secondary pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-[10%] -right-[200px] w-[500px] h-[500px] rounded-full blur-[140px] opacity-[0.08] bg-gradient-to-br from-secondary to-accent pointer-events-none">
+            </div>
+
+            <div class="container-custom relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">The 4-Step Journey</h2>
+                    <p class="text-lg text-text-secondary">From raw data to refined intelligence.</p>
+                </div>
+
+                <div class="relative max-w-[1000px] mx-auto" id="processGrid">
+                    <!-- Timeline Line -->
+                    <div
+                        class="absolute left-4 md:left-1/2 -translate-x-1/2 w-1 md:w-1 h-full bg-timeline-gradient z-0 rounded-full">
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="relative mb-12 md:mb-12 w-full flex justify-start md:even:justify-end">
+                        <div
+                            class="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 w-9 h-9 md:w-13 md:h-13 bg-white border-4 border-primary rounded-full z-10 flex items-center justify-center font-extrabold shadow-md transition-transform duration-300 hover:scale-115">
+                            1</div>
+                        <div class="w-[calc(100%-45px)] ml-[45px] md:w-[45%] md:ml-0 timeline-reveal">
+                            <div
+                                class="bg-white border border-black/5 rounded-3xl p-5 md:p-8 transition-all duration-400 shadow-sm hover:-translate-y-2 hover:shadow-lg hover:border-primary">
+                                <div class="flex items-center gap-3 md:gap-6 mb-4">
+                                    <div
+                                        class="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-primary/10 flex items-center justify-center text-xl md:text-2xl text-primary flex-shrink-0">
+                                        <i class="fa-solid fa-clipboard-list"></i>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block text-xs md:text-sm text-text-secondary uppercase font-bold tracking-widest mb-1">Step
+                                            1</span>
+                                        <h3 class="text-xl md:text-2xl font-extrabold">Requirement Analysis</h3>
+                                    </div>
+                                </div>
+                                <div class="text-text-secondary">
+                                    <p class="text-sm md:text-base leading-relaxed mb-4">We start by understanding your
+                                        project objectives, source data, and expected output formats. This step helps
+                                        define a clear scope and ensures the XML conversion or data processing workflow
+                                        is aligned with your
+                                        technical needs.
+                                    </p>
+                                    <ul class="list-none p-0">
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Initial discussion to understand project goals</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Review and sampling of source materials</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Collection of DTD or schema requirements
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Timeline definition and delivery planning</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Workflow configuration based on project scope</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative mb-12 md:mb-12 w-full flex justify-start md:even:justify-end">
+                        <div
+                            class="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 w-9 h-9 md:w-13 md:h-13 bg-white border-4 border-success rounded-full z-10 flex items-center justify-center font-extrabold shadow-md transition-transform duration-300 hover:scale-115">
+                            2</div>
+                        <div class="w-[calc(100%-45px)] ml-[45px] md:w-[45%] md:ml-0 timeline-reveal">
+                            <div
+                                class="bg-white border border-black/5 rounded-3xl p-5 md:p-8 transition-all duration-400 shadow-sm hover:-translate-y-2 hover:shadow-lg hover:border-success">
+                                <div class="flex items-center gap-3 md:gap-6 mb-4">
+                                    <div
+                                        class="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-success/10 flex items-center justify-center text-xl md:text-2xl text-success flex-shrink-0">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block text-xs md:text-sm text-text-secondary uppercase font-bold tracking-widest mb-1">Step
+                                            2</span>
+                                        <h3 class="text-xl md:text-2xl font-extrabold">Data Conversion</h3>
+                                    </div>
+                                </div>
+                                <div class="text-text-secondary">
+                                    <p class="text-sm md:text-base leading-relaxed mb-4">In this stage, our team
+                                        converts source content into structured formats using a balanced approach that
+                                        combines automated processing with skilled manual review to maintain accuracy
+                                        and consistency.</p>
+                                    <ul class="list-none p-0">
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Automated preparation and format normalization
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Structured XML tagging and content mapping</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Schema-aligned checks during conversion</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Progress monitoring and status updates</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Refinement based on review outcomes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative mb-12 md:mb-12 w-full flex justify-start md:even:justify-end">
+                        <div
+                            class="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 w-9 h-9 md:w-13 md:h-13 bg-white border-4 border-warning rounded-full z-10 flex items-center justify-center font-extrabold shadow-md transition-transform duration-300 hover:scale-115">
+                            3</div>
+                        <div class="w-[calc(100%-45px)] ml-[45px] md:w-[45%] md:ml-0 timeline-reveal">
+                            <div
+                                class="bg-white border border-black/5 rounded-3xl p-5 md:p-8 transition-all duration-400 shadow-sm hover:-translate-y-2 hover:shadow-lg hover:border-warning">
+                                <div class="flex items-center gap-3 md:gap-6 mb-4">
+                                    <div
+                                        class="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-warning/10 flex items-center justify-center text-xl md:text-2xl text-warning flex-shrink-0">
+                                        <i class="fa-solid fa-vial-circle-check"></i>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block text-xs md:text-sm text-text-secondary uppercase font-bold tracking-widest mb-1">Step
+                                            3</span>
+                                        <h3 class="text-xl md:text-2xl font-extrabold">Quality Checks</h3>
+                                    </div>
+                                </div>
+                                <div class="text-text-secondary">
+                                    <p class="text-sm md:text-base leading-relaxed mb-4">Each project goes through
+                                        structured quality checks to verify data accuracy, consistency, and alignment
+                                        with
+                                        defined specifications before final delivery.
+                                    </p>
+                                    <ul class="list-none p-0">
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Automated validation against DTD and XSD rules
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Manual review and content verification</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative mb-6 md:mb-0 w-full flex justify-start md:even:justify-end">
+                        <div
+                            class="absolute left-4 md:left-1/2 -translate-x-1/2 top-8 w-9 h-9 md:w-13 md:h-13 bg-white border-4 border-accent rounded-full z-10 flex items-center justify-center font-extrabold shadow-md transition-transform duration-300 hover:scale-115">
+                            4</div>
+                        <div class="w-[calc(100%-45px)] ml-[45px] md:w-[45%] md:ml-0 timeline-reveal">
+                            <div
+                                class="bg-white border border-black/5 rounded-3xl p-5 md:p-8 transition-all duration-400 shadow-sm hover:-translate-y-2 hover:shadow-lg hover:border-accent">
+                                <div class="flex items-center gap-3 md:gap-6 mb-4">
+                                    <div
+                                        class="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-accent/10 flex items-center justify-center text-xl md:text-2xl text-accent flex-shrink-0">
+                                        <i class="fa-solid fa-truck-fast"></i>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block text-xs md:text-sm text-text-secondary uppercase font-bold tracking-widest mb-1">Step
+                                            4</span>
+                                        <h3 class="text-xl md:text-2xl font-extrabold">Client Delivery</h3>
+                                    </div>
+                                </div>
+                                <div class="text-text-secondary">
+                                    <p class="text-sm md:text-base leading-relaxed mb-4">We deliver processed data in
+                                        the agreed formats along with clear documentation to support smooth handover
+                                        and integration into your systems.</p>
+                                    <ul class="list-none p-0">
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Secure data transfer or integration support
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Delivery summary and processing details
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Quality review notes and documentation</li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Post-delivery clarification and support
+                                        </li>
+                                        <li
+                                            class="relative pl-6 mb-2 text-sm md:text-[0.95rem] transition-all hover:text-text-primary hover:translate-x-1 before:content-['●'] before:absolute before:left-0 before:text-primary before:text-sm">
+                                            Client feedback for continuous improvement
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantees Section -->
+        <section class="py-12 bg-white">
+            <div class="container-custom">
+                <div
+                    class="bg-slate-50 border border-black/5 rounded-[28px] p-8 md:p-12 max-w-[950px] mx-auto text-center shadow-sm">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Our Quality Guarantees</h2>
+                    <p class="text-lg text-text-secondary mb-12 max-w-2xl mx-auto">We approach every project with
+                        clearly defined quality practices that help ensure reliability, consistency,
+                        and transparent collaboration throughout the engagement.
+                    </p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-12 text-left list-none p-0">
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Consistent focus on high data accuracy across
+                                deliverables</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Dedicated coordination support throughout the
+                                project
+                            </span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Secure handling of sensitive and confidential
+                                information</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Scalable workflows for small and large
+                                project volumes
+                            </span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Clear communication during key project
+                                phases</span>
+                        </li>
+                        <li
+                            class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md">
+                            <i class="fa-regular fa-circle-check text-primary text-2xl flex-shrink-0"></i>
+                            <span class="text-sm md:text-base font-medium">Revision support based on agreed project
+                                scope
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="pb-16 bg-white">
+            <div class="container-custom">
+                <div
+                    class="relative bg-accent-gradient rounded-[32px] p-8 md:p-20 text-center text-white overflow-hidden shadow-2xl">
+                    <!-- Animated background -->
+                    <div
+                        class="absolute -top-1/2 -left-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_60%)] animate-rotate-slow pointer-events-none">
+                    </div>
+
+                    <h2 class="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight relative z-10">Ready to Start
+                        Your Project?</h2>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 opacity-90 leading-relaxed relative z-10">
+                        Let’s review your requirements and define a clear, structured approach that aligns with your
+                        data goals,
+                        timelines, and quality expectations.
+                    </p>
+                    <a href="Contact.html"
+                        class="inline-flex items-center gap-4 bg-white text-primary px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg transition-all duration-400 shadow-lg hover:-translate-y-1 hover:scale-105 hover:bg-slate-50 hover:shadow-2xl relative z-10 group">
+                        Start Your Project
+                        <i
+                            class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gradient-to-b from-[#0b1a2a] to-[#081426] px-6 pt-20 pb-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 text-slate-300">
+
+    <div>
+      <div class="flex items-center gap-2 text-xl font-semibold mb-4">
+        <span class="bg-primary px-3 py-1 rounded-lg">⌘</span>
+        Smart<span class="text-accent">XML</span>
+      </div>
+      <p class="text-sm">Smart XML Solutions delivers reliable XML conversion, content digitization, and data processing services 
+that help organizations manage structured information with accuracy and consistency.</p>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-4">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>XML Conversion Services</li>
+        <li>XML Tagging Services</li>
+        <li>DTD / XSD Validation</li>
+        <li>Content Digitization Services</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white mb-4">Company</h4>
+      <ul class="space-y-2 text-sm">
+        <li>About Smart XML Solutions</li>
+        <li>Our Process</li>
+        <li>Industries We Serve</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+   <div>
+  <h4 class="text-white mb-4">Networks</h4>
+
+  <p class="text-sm mb-4 text-slate-400">
+    Connect with Smart XML Solutions
+  </p>
+
+  <div class="flex items-center gap-4">
+
+    <!-- LinkedIn -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-600 text-white
+              hover:bg-blue-700 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- Twitter / X -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-sky-500 text-white
+              hover:bg-sky-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-blue-500 text-white
+              hover:bg-blue-600 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="#"
+       class="w-10 h-10 flex items-center justify-center rounded-full
+              bg-gradient-to-tr from-pink-500 to-purple-600 text-white
+              hover:opacity-90 hover:-translate-y-1
+              transition-all duration-300"
+       aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+  </div>
+</div>
+
+  </div>
+
+  <div class="mt-12 border-t border-white/10 pt-4 text-center text-sm text-slate-400">
+    © 2026 Smart XML Solutions. All rights reserved. 
+  </div>
+</footer>
+    </main>
+
+</body>
+
+</html>
