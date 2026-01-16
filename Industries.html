@@ -12,8 +12,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
     <link rel="stylesheet" href="industries.css">
+    <style>
+      /* NAV LINK UNDERLINE EFFECT */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #2563eb; /* Tailwind blue-600 */
+  transition: width 0.5s ease;
+}
+
+/* Hover underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active page underline */
+.nav-link.active {
+  color: #2563eb;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+    </style>
 </head>
+
+
 <body class="bg-gray-100 text-gray-800">
+  
  <!-- ================= NAVBAR ================= -->
 <header class="bg-white sticky top-0 z-50 shadow">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -25,16 +62,15 @@
     </div>
 
     <!-- Nav Links -->
-    <nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
-      <a href="./index.html">Home</a>
-      <a href="./AboutUs.html">About Us</a>
-      <a href="./Services.html">Services</a>
-      <a href="./Process.html">Process</a>
-      <a href="./Industries.html" class="px-3 py-1 rounded-lg bg-blue-100 text-blue-600">
-        Industries
-      </a>
-      <a href="./Contact.html">Contact</a>
-    </nav>
+<nav id="navLinks" class="hidden md:flex gap-6 text-slate-600">
+  <a href="./index.html" class="nav-link">Home</a>
+  <a href="./AboutUs.html" class="nav-link">About Us</a>
+  <a href="./Services.html" class="nav-link">Services</a>
+  <a href="./Process.html" class="nav-link">Process</a>
+  <a href="./Industries.html" class="nav-link">Industries</a>
+  <a href="./Contact.html" class="nav-link">Contact</a>
+</nav>
+
 
     <!-- Request a Quote Button -->
     <a href="./Contact.html">
@@ -64,208 +100,261 @@
 
 <!-- INDUSTRIES SECTION -->
 <section >
-<!-- banking -->
-<!-- INDUSTRY CARD -->
-<div class="bg-gray-100 rounded-xl shadow-lg p-6 justify-center">
-  <div class="flex flex-col md:flex-row gap-16 items-center">
+  
+<!-- ================= INDUSTRY CARD ================= -->
 
-    <!-- LEFT IMAGE -->
-    <img 
-      src="./asserts/banking(image).jpeg"
-      alt="Banking & Finance"
-      class="w-full md:w-2/6 h-80 object-cover rounded-lg"
-    />
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
 
-    <!-- RIGHT CONTENT -->
-    <div class="flex-1 gap-3 justify-between">
-      <div class="text-2xl font-semibold mb-4 text-gray-900"><i class="fa-solid fa-building-columns"></i>
-        Banking & Finance
+    <div class="bg-white rounded-3xl shadow-lg p-10 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Publishing
+          </h2>
+        </div>
+
+        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+          We help publishing teams modernize their content by converting legacy
+          materials into structured digital formats that support efficient workflows
+          and multi-channel distribution.
+        </p>
+
+        <!-- STATS -->
+        <div class="mt-8 flex gap-10">
+          <div>
+            <p class="text-3xl font-bold text-blue-600">50+</p>
+            <p class="text-sm text-gray-500">Clients</p>
+          </div>
+
+          <div class="h-10 w-px bg-gray-300"></div>
+
+          <div>
+            <p class="text-3xl font-bold text-blue-600">10,000+</p>
+            <p class="text-sm text-gray-500">Projects</p>
+          </div>
+        </div>
       </div>
 
-      <p class="text-sm text-gray-700 leading-relaxed mb-6">
-        We support banking and financial organizations by structuring, validating,<br>
-        and digitizing data to improve reporting accuracy, regulatory readiness,
-        and <br>long-term information management.
-      </p>
-
-      <!-- STATS -->
-      <div class="flex gap-6">
-        <div>
-          <p class="text-xl font-bold text-blue-600">25+</p>
-          <p class="text-xs text-gray-500">Clients</p>
-        </div>
-        <div>
-            |
-            
-        </div>
-        <div>
-          <p class="text-xl font-bold text-blue-600">5,000+</p>
-          <p class="text-xs text-gray-500">Projects</p>
-        </div>
+      <!-- RIGHT IMAGE (REPLACES COMMON USE CASES) -->
+      <div class="relative">
+        <img
+          src="IndustriesPageImages/publishing.jpeg"
+          alt="Publishing Industry"
+          class="w-full h-80 object-cover rounded-2xl"
+        />
       </div>
+
     </div>
-
   </div>
-</div> 
+</section>
+<!-- ================= BANKING & FINANCE ================= -->
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-3xl shadow-lg p-10 grid lg:grid-cols-2 gap-16 items-center">
 
+      <!-- LEFT CONTENT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Banking & Finance
+          </h2>
+        </div>
 
-        <!-- healthcare-->
-       <div class="bg-gray-100 rounded-xl shadow-lg p-6 justify-center">
-    <div class="flex flex-col md:flex-row gap-16 items-center">
+        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+          We support banking and financial organizations by structuring, validating,
+          and digitizing data to improve reporting accuracy, regulatory readiness,
+          and long-term information management.
+        </p>
 
-        <!-- Left Content -->
-        <div class="flex-1 gap-3 justify-between">
-            <div class="text-2xl font-semibold mb-4 text-gray-900"><i class="fa-solid fa-heart-pulse"></i>
-                Healthcare
+        <!-- STATS -->
+        <div class="mt-8 flex gap-10">
+          <div>
+            <p class="text-3xl font-bold text-blue-600">25+</p>
+            <p class="text-sm text-gray-500">Clients</p>
+          </div>
+
+          <div class="h-10 w-px bg-gray-300"></div>
+
+          <div>
+            <p class="text-3xl font-bold text-blue-600">5,000+</p>
+            <p class="text-sm text-gray-500">Projects</p>
+          </div>
+        </div>
       </div>
 
-            <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                We assist healthcare organizations in organizing, structuring,<br> and digitizing
-                medical and research-related content to support efficient <br>data access and
-                operational workflows.
-            </p>
-            <!-- STATS -->
-             <div class="flex gap-6">
-              <div>
-                <p class="text-xl font-bold text-blue-600">30+</p>
-                <p class="text-xs text-gray-500">Clients</p>
-            </div>
-            <div>
-                |
-
-            </div>
-            <div>
-                <p class="text-xl font-bold text-blue-600">8,000+</p>
-                <p class="text-xs text-gray-500">Projects</p>
-            </div>
-        </div>
-    </div>
-
-        <!-- Right Image -->
-        <img 
-            src="./asserts/img2.jpeg" 
-            alt="Healthcare"
-            class="w-full md:w-2/6 h-80 object-cover rounded-lg"
+      <!-- RIGHT IMAGE -->
+      <div>
+        <img
+          src="IndustriesPageImages/bankingandfinance.jpeg"
+          alt="Banking & Finance"
+          class="w-full h-80 object-cover rounded-2xl"
         />
+      </div>
 
     </div>
-</div>
+  </div>
+</section>
+<!-- ================= HEALTHCARE ================= -->
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-3xl shadow-lg p-10 grid lg:grid-cols-2 gap-16 items-center">
 
-        <!-- Publishing -->
-        <div class="bg-gray-100 rounded-xl shadow-lg p-6 justify-center">
-    <div class="flex flex-col md:flex-row gap-16 items-center">
+      <!-- LEFT CONTENT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Healthcare
+          </h2>
+        </div>
 
-        <!-- Left Image -->
-        <img 
-            src="./asserts/img1.jpeg" 
-            alt="Publishing"
-            class="w-full md:w-2/6 h-80 object-cover rounded-lg"
+        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+          We assist healthcare organizations in organizing, structuring, and digitizing
+          medical and research-related content to support efficient data access and
+          operational workflows.
+        </p>
+
+        <!-- STATS -->
+        <div class="mt-8 flex gap-10">
+          <div>
+            <p class="text-3xl font-bold text-blue-600">30+</p>
+            <p class="text-sm text-gray-500">Clients</p>
+          </div>
+
+          <div class="h-10 w-px bg-gray-300"></div>
+
+          <div>
+            <p class="text-3xl font-bold text-blue-600">8,000+</p>
+            <p class="text-sm text-gray-500">Projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div>
+        <img
+          src="IndustriesPageImages/healthcare.jpeg"
+          alt="Healthcare"
+          class="w-full h-80 object-cover rounded-2xl"
         />
-        <!-- Right Content -->
-                <div class="flex-1 gap-3 justify-between">
-      <div class="text-2xl font-semibold mb-4 text-gray-900"><i class="fa-solid fa-book-open"></i>
-                    Publishing
-            </div>
+      </div>
 
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                    We help publishing teams modernize their content by converting legacy<br> materials into structured digital formats that support efficient workflows<br> and multi-channel distribution.
-                </p>
-                <!-- STATS -->
-      <div class="flex gap-6">
-                <div>
-                    <p class="text-xl font-bold text-blue-600">50+</p>
-                    <p class="text-xs text-gray-500">Clients</p>
-                </div>
-            <div>
-                |
-
-            </div>
-            <dev>
-                    <p class="text-xl font-bold text-blue-600">10,000+</p>
-                    <p class="text-xs text-gray-500">Projects</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education -->
-         <div class="bg-gray-100 rounded-xl shadow-lg p-6 justify-center">
-            <div class="flex flex-col md:flex-row gap-16 items-center">
-
-        <!-- Left Content -->
-            <div class="flex-1 gap-3 justify-between">
-      <div class="text-2xl font-semibold mb-4 text-gray-900"><i class="fa-solid fa-graduation-cap"></i>
-                Education
-            </div>
-
-            <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                We support educational publishers and institutions by converting learning
-                materials into structured, digital formats that improve accessibility,
-                usability, and content management.
-            </p>
-            <!-- STATS -->
-             <div class="flex gap-6">
-              <div>
-                <p class="text-xl font-bold text-blue-600">40+</p>
-                <p class="text-xs text-gray-500">Clients</p>
-            </div>
-            <div>
-                |
-
-            </div>
-            <div>
-                <p class="text-xl font-bold text-blue-600">15,000+</p>
-                <p class="text-xs text-gray-500">Projects</p>
-            </div>
-        </div>
     </div>
-        <!-- Right Image -->
-        <img 
-            src="./asserts/img3.jpeg" 
-            alt="Education"
-            class="w-full md:w-2/6 h-80 object-cover rounded-lg"
-        />
+  </div>
+</section>
+<!-- ================= EDUCATION ================= -->
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-3xl shadow-lg p-10 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Education
+          </h2>
         </div>
+
+        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+          We support educational publishers and institutions by converting learning
+          materials into structured, digital formats that improve accessibility,
+          usability, and content management.
+        </p>
+
+        <!-- STATS -->
+        <div class="mt-8 flex gap-10">
+          <div>
+            <p class="text-3xl font-bold text-blue-600">40+</p>
+            <p class="text-sm text-gray-500">Clients</p>
+          </div>
+
+          <div class="h-10 w-px bg-gray-300"></div>
+
+          <div>
+            <p class="text-3xl font-bold text-blue-600">15,000+</p>
+            <p class="text-sm text-gray-500">Projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div>
+        <img
+          src="IndustriesPageImages/education.jpeg"
+          alt="Education"
+          class="w-full h-80 object-cover rounded-2xl"
+        />
+      </div>
+
     </div>
-</div>
+  </div>
+</section>
+<!-- ================= E-COMMERCE ================= -->
+<section class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-3xl shadow-lg p-10 grid lg:grid-cols-2 gap-16 items-center">
 
-        <!-- E-Commerce -->
-        <div class="bg-gray-100 rounded-xl shadow-lg p-6 justify-center">
-            <div class="flex flex-col md:flex-row gap-16 items-center">
-                <!-- Left Image -->
-                 <img 
-            src="./asserts/img4.jpeg" 
-            alt="E-Commerce"
-            class="w-full md:w-2/6 h-80 object-cover rounded-lg"
-        />
-        <!-- Right Content -->
-         <div class="flex-1 gap-3 justify-between">
-            <div class="text-2xl font-semibold mb-4 text-gray-900"><i class="fa-solid fa-cart-shopping"></i>
-                    E-Commerce
-            </div>
-
-            <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                We support educational publishers and institutions by converting learning
-                materials into structured, digital formats that improve accessibility,
-                usability, and content management.
-            </p>
-            </p>
-
-               <!-- STATS -->
-             <div class="flex gap-6">
-              <div>
-                <p class="text-xl font-bold text-blue-600">20+</p>
-                <p class="text-xs text-gray-500">Clients</p>
-            </div>
-            <div>
-                |
-
-            </div>
-            <div>
-                <p class="text-xl font-bold text-blue-600">2,000+</p>
-                <p class="text-xs text-gray-500">Projects</p>
-            </div>
+      <!-- LEFT CONTENT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">
+            E-Commerce
+          </h2>
         </div>
+
+        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+          We support e-commerce organizations by structuring product data,
+          catalogs, and transactional content into scalable digital formats
+          that enhance accuracy and operational efficiency.
+        </p>
+
+        <!-- STATS -->
+        <div class="mt-8 flex gap-10">
+          <div>
+            <p class="text-3xl font-bold text-blue-600">20+</p>
+            <p class="text-sm text-gray-500">Clients</p>
+          </div>
+
+          <div class="h-10 w-px bg-gray-300"></div>
+
+          <div>
+            <p class="text-3xl font-bold text-blue-600">2,000+</p>
+            <p class="text-sm text-gray-500">Projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div>
+        <img
+          src="IndustriesPageImages/ecommerce.jpeg"
+          alt="E-Commerce"
+          class="w-full h-80 object-cover rounded-2xl"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 </section>
 
 <!-- WHY CHOOSE -->
